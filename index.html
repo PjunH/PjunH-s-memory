@@ -3,32 +3,7 @@
 <head>
     <title>Junhyeong</title>
     <meta charset="utf-8"> 
-    <style>
-        h1{
-            border-bottom:10px solid red;
-            padding:20px;
-
-        }
-
-        
-        @media all and (min-width: 480px) {
-            #container{
-                display:grid;
-                grid-template-columns:150px 1fr ;
-            }
-        }
-        @media all and (max-width: 480px) {
-        }
-                
-
-            body{
-                font-family: 'Red Hat Mono', monospace;
-            }
-        
-      
-        
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK3PWSZDDS"></script>
 <script>
@@ -44,16 +19,24 @@
     
 </head>
 <body>
-    <img src="https://images.unsplash.com/photo-1529264978834-666a0e99f884?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width = "100">
-    <h1><a href="index.html">WEB</a></h1>
-        <input type="button" value="Night" onclick="
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        ">
-        <input type="button" value="Day" onclick="
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        ">
+    
+    <h1><a href="index.html">Welcome to Junhyeong's WEB</a></h1>
+
+
+        <input type="button" id='dnbtn' value="Dark" onclick="
+        let button = document.querySelector('#dnbtn');  //this 로 바꿔도 같다.
+            if(button.value=== 'Dark'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            button.value='Light';
+        }else{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            button.value = 'Dark';
+        }
+    ">
+    
+    
     <div id="container">
         <ol>
             <li><a href="1.html">html</a></li>

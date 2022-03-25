@@ -1,6 +1,8 @@
 body{
     background-image:url(https://picsum.photos/1024);
     background-size:cover;
+    
+    font-family: 'Red Hat Mono', monospace;
 }
 h1{
     border-bottom:10px solid rgb(204, 127, 127) !important;

@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <h1>Function</h1>
+        <script>
+            function abc(){
+            console.log('a');
+            console.log('b');
+            console.log('c');
+            }
+            console.log(1);
+            console.log(2);
+            abc();
+            console.log(3);
+            console.log(4);
+            abc();
+            console.log(5);
+            console.log(6);
+
+        </script>
+        <h1>VAT부가가치세</h1>
+        <script>
+            function 부가세계산(가격, 부가세율){ //매개변수, parameter
+                let 부가세 = 가격*부가세율;
+                return(부가세);
+            }
+            console.log(부가세계산(2000, 0.1)); //인자, argument, 입력값
+        </script>
+        
+        <h1>SUM</h1>
+        <script> //return 은 함수의 종료조건
+            function sum(val1, val2){
+                return val1*val2;
+
+
+
+            }
+            alert(sum(100,200)*70)  //이거 리턴값 이해하는데 도움됨 연산자 바꿔가면서 해보도록 이놈자식
+        </script>
+        
+    </body>
+</html>

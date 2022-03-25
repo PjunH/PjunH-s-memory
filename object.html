@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <h1>Object</h1>
+        <script>
+            let student = ['Jh','duru']
+            console.log(student[0],student[1]);
+            //배열은 순서가 있는 데이터, 평등하면 배열에 담으면 됨
+
+            let member = {developer:'Jh',designer:'duru'};
+            console.log(member.developer, member.designer);
+
+            let person = {name:'Jh', city:'daegu', job:'singer'};
+            console.log(person.name, person.city, person.job);
+            //순서없이 이름을 가지고 저장할때는 객ㅊ
+            //객체는 이름으로 식별되는 배열같은거
+            //객체와 배열은 Javascript에서 남매같은것들
+
+            //ex math.random() 에서 math는 객체다. 안의 random은 math안에 잇는 함수
+            //Math.Random(), Math.PI 등등
+
+            let MyMath= {}
+            MyMath.PI=3.14;
+            MyMath.sum=function(val1,val2){
+                return val1+val2;
+
+            }
+            console.log(MyMath.PI);
+            console.log(MyMath.sum(10,20));
+        </script>
+    </body>
+</html>

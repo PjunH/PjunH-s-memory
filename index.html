@@ -3,7 +3,9 @@
 <head>
     <title>Junhyeong</title>
     <meta charset="utf-8"> 
+    <!--아랫부분 style.css링크 ,수정시 style.css 시트에서 수정-->
     <link rel="stylesheet" href="style.css">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK3PWSZDDS"></script>
 <script>
@@ -12,38 +14,59 @@
   gtag('js', new Date());
 
   gtag('config', 'G-RK3PWSZDDS');
+
 </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap" rel="stylesheet">
-    
+    <!--폰트 링크-->
 </head>
+
 <body>
-    
-    <h1><a href="index.html">Welcome to Junhyeong's WEB</a></h1>
-
-
-        <input type="button" id='dnbtn' value="Dark" onclick="
-        let button = document.querySelector('#dnbtn');  //this 로 바꿔도 같다.
-            if(button.value=== 'Dark'){
+    <script>
+        function Dark(){
             document.querySelector('body').style.backgroundColor = 'black';
             document.querySelector('body').style.color = 'white';
-            button.value='Light';
-        }else{
+            let as = document.querySelectorAll('a'); //as 는 a들
+            for(let i=0; i<as.length; i=i+1){
+                as[i].style.color = 'white';
+                }
+        }
+        function Light(){
             document.querySelector('body').style.backgroundColor = 'white';
             document.querySelector('body').style.color = 'black';
-            button.value = 'Dark';
+            let as = document.querySelectorAll('a'); //as 는 a들
+                for(let i=0; i<as.length; i=i+1){
+                    as[i].style.color = 'black';
+                }
         }
-    ">
+    </script>
+    <input type="button" id='dnbtn' value="Dark" onclick="
+    let button = document.querySelector('#dnbtn');  // 등호 뒤의 내용을 this 로 바꿔도 같다.
+        if(button.value=== 'Dark'){
+        Dark();      
+        button.value='Light';
+    }else{
+        Light();
+        button.value = 'Dark';
+    }
+    
+">
+    
+    <h1><a id="a1" href="index.html">Welcome to Junhyeong's WEB</a></h1>
+
+
+    
+
     
     
     <div id="container">
         <ol>
-            <li><a href="1.html">html</a></li>
-            <li><a href="2.html">css</a></li>
-            <li><a href="3.html">JavaScript</a></li>
-            <li><a href="review.html">Review 1</a></li>
-            <li><a href="review2.html">Review 2</a></li>
+            <li><a id="a2" href="1.html">html</a></li>
+            <li><a id="a3" href="2.html">css</a></li>
+            <li><a id="a4" href="3.html">JavaScript</a></li>
+            <li><a id="a5" href="review.html">Review 1</a></li>
+            <li><a id="a6" href="review2.html">Review 2</a></li>
         </ol>
         
         
@@ -53,6 +76,8 @@
         </div>
         
     </div>
+
+    <!--disquss를 이용한 댓글기능 코드-->
     <div id="disqus_thread"></div>
     <script>
         /**
